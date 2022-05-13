@@ -15,6 +15,9 @@ class MainGui(QMainWindow):
 		self.setStyleSheet("background-color:rgb(16,16,14);color:#fff;font-size:50px;")
 		self.m = 0
 		newest = (virsh.replace(".", "*"))
+		
+		# newest = (virsh.replace("\n", "*")) # if you have many \n
+		
 		newest = newest.replace(",", "*")
 		newest = newest.replace(" ", "*")
 		self.g = newest.split("*")
